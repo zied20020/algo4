@@ -1,0 +1,19 @@
+ALGORITHM inseertion_Sort
+VAR
+    tab : ARRAY_OF INTEGER[];
+    i , j , value: INTEGER;
+BEGIN
+
+  FOR i FROM 1 TO tab.length - 1  DO
+    value := tab[i];
+    j := i - 1;
+    WHILE (j >= 0 and tab[j] > value) DO
+        tab[j + 1] := tab[j];
+        j := j - 1;
+    END_WHILE
+        tab[j + 1] := value;
+  END_FOR
+
+END
+
+
